@@ -1,45 +1,44 @@
 import { FlaskConical } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="border-t border-border bg-background py-16">
+    <footer className="border-t border-border bg-background py-16">
       <div className="container mx-auto px-6">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 font-display text-xl font-bold">
+            <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <FlaskConical size={20} className="text-primary" />
               <span className="text-gradient">PEPTIDE</span>
               <span className="text-foreground">LAB</span>
-            </div>
+            </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Premium research peptides with uncompromising quality. Every product is
-              synthesized, purified, and verified to the highest scientific standards.
+              Research-grade peptide compounds for educational and in-vitro research
+              purposes only. Not for human consumption. No medical advice provided.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-foreground">Products</h4>
+            <h4 className="font-display text-sm font-semibold text-foreground">Navigation</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><a href="#peptides" className="transition-colors hover:text-primary">All Peptides</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">Growth Hormone</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">Recovery</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">Skin & Hair</a></li>
+              <li><Link to="/" className="transition-colors hover:text-primary">Home</Link></li>
+              <li><Link to="/#peptides" className="transition-colors hover:text-primary">Products</Link></li>
+              <li><Link to="/research" className="transition-colors hover:text-primary">Research & Education</Link></li>
+              <li><Link to="/about" className="transition-colors hover:text-primary">About</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-foreground">Company</h4>
+            <h4 className="font-display text-sm font-semibold text-foreground">Information</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="transition-colors hover:text-primary">About Us</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">Lab Reports</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">Contact</a></li>
-              <li><a href="#" className="transition-colors hover:text-primary">FAQ</a></li>
+              <li><Link to="/contact" className="transition-colors hover:text-primary">Contact</Link></li>
+              <li><Link to="/legal" className="transition-colors hover:text-primary">Legal & Disclaimer</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-xs text-muted-foreground">
-          <p>© 2026 PeptideLab. For research purposes only. Not for human consumption.</p>
+          <p>© 2026 PeptideLab. For research and educational purposes only. Not for human consumption. No medical advice provided.</p>
         </div>
       </div>
     </footer>

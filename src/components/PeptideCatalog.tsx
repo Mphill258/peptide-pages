@@ -32,7 +32,7 @@ const PeptideCatalog = () => {
           className="mb-16 text-center"
         >
           <h2 className="font-display text-3xl font-bold md:text-5xl">
-            Our <span className="text-gradient">Peptide Pens</span>
+            Our <span className="text-gradient">Research Compounds</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Pre-filled, HPLC-purified, third-party tested — for research use only
