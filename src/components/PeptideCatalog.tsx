@@ -35,14 +35,13 @@ const PeptideCatalog = () => {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="font-display text-3xl font-bold md:text-5xl">
-            Our <span className="text-gradient">Research Compounds</span>
+          <span className="section-label">Product Catalogue</span>
+          <h2 className="mt-4 font-display text-3xl font-bold md:text-5xl">
+            Research <span className="text-gradient">Compounds</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <div className="divider-gold mt-6" />
+          <p className="mt-6 text-base text-muted-foreground">
             HPLC-purified, third-party tested — for research and educational purposes only
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Not for human consumption
           </p>
         </motion.div>
 
