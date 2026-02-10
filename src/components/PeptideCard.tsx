@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
 
-interface DosageInfo {
-  clicksPerMg: number;
-  doses: { mg: number; clicks: number }[];
-}
-
 interface PeptideCardProps {
   name: string;
   sequence: string;
@@ -12,10 +7,10 @@ interface PeptideCardProps {
   weight: string;
   category: string;
   index: number;
-  dosageInfo?: DosageInfo;
+  price: string;
 }
 
-const PeptideCard = ({ name, sequence, purity, weight, category, index, dosageInfo }: PeptideCardProps) => {
+const PeptideCard = ({ name, sequence, purity, weight, category, index, price }: PeptideCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -47,27 +42,13 @@ const PeptideCard = ({ name, sequence, purity, weight, category, index, dosageIn
         </div>
       </div>
 
-      {dosageInfo && (
-        <div className="mt-4 border-t border-border pt-4">
-          <div className="mb-2 text-xs font-medium text-muted-foreground">
-            Dosage Guide · <span className="text-primary">{dosageInfo.clicksPerMg} clicks per mg</span>
-          </div>
-          <div className="grid grid-cols-3 gap-1.5">
-            {dosageInfo.doses.map((d) => (
-              <div
-                key={d.mg}
-                className="rounded-md bg-secondary px-2 py-1.5 text-center"
-              >
-                <div className="font-display text-xs font-semibold text-card-foreground">{d.mg}mg</div>
-                <div className="text-[10px] text-muted-foreground">{d.clicks} clicks</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <div className="mt-4 border-t border-border pt-4">
+        <div className="font-display text-2xl font-bold text-primary">{price}</div>
+        <div className="mt-1 text-[10px] text-muted-foreground">+ £10 UK delivery · Research use only · Not for human consumption</div>
+      </div>
 
       <button className="mt-4 w-full rounded-lg border border-border bg-secondary py-2.5 text-sm font-medium text-secondary-foreground transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-primary">
-        View Details
+        Order Now
       </button>
     </motion.div>
   );
