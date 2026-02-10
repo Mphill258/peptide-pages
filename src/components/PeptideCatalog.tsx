@@ -8,6 +8,7 @@ const peptides = [
     purity: "99.5%",
     weight: "60mg Pre-filled Pen",
     category: "Research Compound",
+    price: "£200",
   },
   {
     name: "Tirzepatide (Mounjaro) Pen",
@@ -15,6 +16,7 @@ const peptides = [
     purity: "99.4%",
     weight: "60mg Pre-filled Pen",
     category: "Research Compound",
+    price: "£170",
   },
 ];
 

@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface PeptideCardProps {
   name: string;
@@ -7,9 +9,12 @@ interface PeptideCardProps {
   weight: string;
   category: string;
   index: number;
+  price: string;
 }
 
-const PeptideCard = ({ name, sequence, purity, weight, category, index }: PeptideCardProps) => {
+const PeptideCard = ({ name, sequence, purity, weight, category, index, price }: PeptideCardProps) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,6 +47,35 @@ const PeptideCard = ({ name, sequence, purity, weight, category, index }: Peptid
       </div>
 
       <div className="mt-4 border-t border-border pt-4">
+        <button
+          onClick={() => setOpen(!open)}
+          className="flex w-full items-center justify-between rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-medium text-secondary-foreground transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
+        >
+          <span>View Pricing</span>
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        <motion.div
+          initial={false}
+          animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+          transition={{ duration: 0.25 }}
+          className="overflow-hidden"
+        >
+          <div className="pt-3">
+            <div className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3">
+              <div className="font-display text-2xl font-bold text-primary">{price}</div>
+              <div className="mt-1 text-[10px] text-muted-foreground">
+                + £10 UK delivery · Research use only · Not for human consumption
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mt-4">
         <p className="text-[10px] text-muted-foreground">
           For in-vitro research and educational purposes only. Not for human consumption.
         </p>
