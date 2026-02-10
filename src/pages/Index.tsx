@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PeptideCatalog from "@/components/PeptideCatalog";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -32,6 +33,7 @@ const Index = () => {
             </motion.div>
           </div>
         </section>
+        <PeptideCatalog />
       </main>
       <Footer />
     </div>
