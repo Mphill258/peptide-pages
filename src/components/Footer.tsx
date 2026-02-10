@@ -5,16 +5,16 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-background py-16">
       <div className="container mx-auto px-6">
-        <div className="grid gap-12 md:grid-cols-4">
-          <div className="md:col-span-2">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div>
             <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <FlaskConical size={20} className="text-primary" />
               <span className="text-gradient">PEPTIDE</span>
               <span className="text-foreground">LAB</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Research-grade peptide compounds for educational and in-vitro research
-              purposes only. Not for human consumption. No medical advice provided.
+              Information and materials for laboratory research and educational
+              purposes only. Not for human consumption.
             </p>
           </div>
 
@@ -22,17 +22,17 @@ const Footer = () => {
             <h4 className="font-display text-sm font-semibold text-foreground">Navigation</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li><Link to="/" className="transition-colors hover:text-primary">Home</Link></li>
-              <li><Link to="/#peptides" className="transition-colors hover:text-primary">Products</Link></li>
-              <li><Link to="/research" className="transition-colors hover:text-primary">Research & Education</Link></li>
               <li><Link to="/about" className="transition-colors hover:text-primary">About</Link></li>
+              <li><Link to="/research" className="transition-colors hover:text-primary">Research</Link></li>
+              <li><Link to="/contact" className="transition-colors hover:text-primary">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-display text-sm font-semibold text-foreground">Information</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/contact" className="transition-colors hover:text-primary">Contact</Link></li>
-              <li><Link to="/legal" className="transition-colors hover:text-primary">Legal & Disclaimer</Link></li>
+              <li><Link to="/disclaimer" className="transition-colors hover:text-primary">Disclaimer</Link></li>
+              <li><Link to="/contact" className="transition-colors hover:text-primary">Contact Us</Link></li>
             </ul>
           </div>
         </div>

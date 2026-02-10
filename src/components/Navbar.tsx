@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Home", to: "/" },
-  { label: "Products", to: "/#peptides" },
-  { label: "Research", to: "/research" },
   { label: "About", to: "/about" },
+  { label: "Research", to: "/research" },
   { label: "Contact", to: "/contact" },
+  { label: "Disclaimer", to: "/disclaimer" },
 ];
 
 const Navbar = () => {
@@ -27,7 +27,6 @@ const Navbar = () => {
           <span className="text-foreground">LAB</span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <Link
@@ -38,15 +37,8 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/#peptides"
-            className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[var(--shadow-glow)]"
-          >
-            View Products
-          </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-foreground md:hidden"
@@ -55,7 +47,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
