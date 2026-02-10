@@ -10,9 +10,10 @@ interface PeptideCardProps {
   category: string;
   index: number;
   price: string;
+  image?: string;
 }
 
-const PeptideCard = ({ name, sequence, purity, weight, category, index, price }: PeptideCardProps) => {
+const PeptideCard = ({ name, sequence, purity, weight, category, index, price, image }: PeptideCardProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -23,6 +24,11 @@ const PeptideCard = ({ name, sequence, purity, weight, category, index, price }:
       viewport={{ once: true }}
       className="group relative overflow-hidden rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-glow)]"
     >
+      {image && (
+        <div className="mb-4 overflow-hidden rounded-lg">
+          <img src={image} alt={name} className="h-48 w-full object-cover" />
+        </div>
+      )}
       <div className="mb-4 inline-block rounded-md bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
         {category}
       </div>
