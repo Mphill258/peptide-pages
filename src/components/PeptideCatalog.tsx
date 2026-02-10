@@ -6,8 +6,19 @@ const peptides = [
     name: "Retatrutide Pen",
     sequence: "GIP/GLP-1/Glucagon Triple Agonist",
     purity: "99.5%",
-    weight: "Pre-filled Pen",
+    weight: "60mg Pre-filled Pen",
     category: "Weight Management",
+    dosageInfo: {
+      clicksPerMg: 4,
+      doses: [
+        { mg: 2, clicks: 8 },
+        { mg: 4, clicks: 16 },
+        { mg: 6, clicks: 24 },
+        { mg: 8, clicks: 32 },
+        { mg: 10, clicks: 40 },
+        { mg: 12, clicks: 48 },
+      ],
+    },
   },
   {
     name: "Tirzepatide Pen",
