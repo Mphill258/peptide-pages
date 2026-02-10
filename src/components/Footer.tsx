@@ -9,8 +9,8 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <FlaskConical size={20} className="text-primary" />
-              <span className="text-gradient">PEPTIDE</span>
-              <span className="text-foreground">LAB</span>
+              <span className="text-gradient">OMEGA</span>
+              <span className="text-foreground"> PEPTIDES UK</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Information and materials for laboratory research and educational
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-xs text-muted-foreground">
-          <p>© 2026 PeptideLab. For research and educational purposes only. Not for human consumption. No medical advice provided.</p>
+          <p>© 2026 Omega Peptides UK. For research and educational purposes only. Not for human consumption. No medical advice provided.</p>
         </div>
       </div>
     </footer>

@@ -23,8 +23,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="font-display text-xl font-bold tracking-tight">
-          <span className="text-gradient">PEPTIDE</span>
-          <span className="text-foreground">LAB</span>
+          <span className="text-gradient">OMEGA</span>
+          <span className="text-foreground"> PEPTIDES UK</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
