@@ -25,11 +25,11 @@ const Contact = () => {
               className="mx-auto max-w-3xl text-center"
             >
               <h1 className="font-display text-4xl font-bold md:text-6xl">
-                Get in <span className="text-gradient">Touch</span>
+                Contact <span className="text-gradient">Us</span>
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Have a question about our research compounds? We're here to help.
-                Please note we do not provide medical advice.
+              <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
+                For research-related enquiries, wholesale discussions, or general
+                information, please contact us using the form below or via email.
               </p>
             </motion.div>
 
@@ -37,13 +37,37 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mx-auto mt-16 max-w-xl"
+              className="mx-auto mt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground"
+            >
+              <Mail size={16} className="text-primary" />
+              <span>contact@yourdomain.co.uk</span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground"
+            >
+              <p>We aim to respond to legitimate enquiries within 24–48 hours.</p>
+              <p className="mt-4">
+                Please note: We do not provide medical advice and do not discuss
+                personal use, dosing, or administration. All enquiries must
+                relate strictly to laboratory or research purposes.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mx-auto mt-12 max-w-xl"
             >
               {submitted ? (
                 <div className="rounded-xl border border-primary/30 bg-card p-8 text-center">
                   <MessageSquare size={40} className="mx-auto mb-4 text-primary" />
                   <h3 className="font-display text-xl font-semibold text-card-foreground">
-                    Message Received
+                    Enquiry Received
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Thank you for your enquiry. We'll respond within 24–48 hours.
@@ -75,6 +99,17 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="mb-2 block text-sm font-medium text-foreground">
+                      Organisation{" "}
+                      <span className="text-muted-foreground font-normal">(optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                      placeholder="Your organisation"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-medium text-foreground">
                       Message
                     </label>
                     <textarea
@@ -91,20 +126,10 @@ const Contact = () => {
                     Send Enquiry
                   </button>
                   <p className="text-center text-xs text-muted-foreground">
-                    We do not provide medical advice. All enquiries relate to research compounds only.
+                    Please include your organisation or research purpose when submitting an enquiry.
                   </p>
                 </form>
               )}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mx-auto mt-12 flex max-w-xl items-center justify-center gap-2 text-sm text-muted-foreground"
-            >
-              <Mail size={16} className="text-primary" />
-              <span>info@peptidelab.co.uk</span>
             </motion.div>
           </div>
         </section>
