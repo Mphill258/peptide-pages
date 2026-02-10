@@ -21,7 +21,7 @@ const peptides = [
     },
   },
   {
-    name: "Tirzepatide Pen",
+    name: "Tirzepatide (Mounjaro) Pen",
     sequence: "GIP/GLP-1 Dual Agonist",
     purity: "99.4%",
     weight: "60mg Pre-filled Pen",
@@ -29,12 +29,12 @@ const peptides = [
     dosageInfo: {
       clicksPerMg: 4,
       doses: [
-        { mg: 2, clicks: 8 },
-        { mg: 4, clicks: 16 },
-        { mg: 6, clicks: 24 },
-        { mg: 8, clicks: 32 },
+        { mg: 2.5, clicks: 10 },
+        { mg: 5, clicks: 20 },
+        { mg: 7.5, clicks: 30 },
         { mg: 10, clicks: 40 },
-        { mg: 12, clicks: 48 },
+        { mg: 12.5, clicks: 50 },
+        { mg: 15, clicks: 60 },
       ],
     },
   },
