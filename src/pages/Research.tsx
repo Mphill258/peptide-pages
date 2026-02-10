@@ -2,11 +2,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { FlaskConical } from "lucide-react";
+import retatrutideImg from "@/assets/retatrutide-pen.jpg";
+import tirzepatideImg from "@/assets/tirzepatide-pen.jpg";
 
 const compounds = [
   {
     name: "Retatrutide (LY-3437943)",
     type: "GIP/GLP-1/Glucagon Triple Receptor Agonist",
+    image: retatrutideImg,
     description:
       "Retatrutide is a novel investigational peptide developed by Eli Lilly. It is the first triple incretin receptor agonist, acting simultaneously on GIP, GLP-1, and glucagon receptors. Published Phase 2 clinical trial data (NEJM, 2023) demonstrated statistically significant reductions in body weight among participants. It is currently being evaluated in Phase 3 trials.",
     details: [
@@ -20,6 +23,7 @@ const compounds = [
   {
     name: "Tirzepatide (Mounjaro)",
     type: "GIP/GLP-1 Dual Receptor Agonist",
+    image: tirzepatideImg,
     description:
       "Tirzepatide is a dual GIP and GLP-1 receptor agonist developed by Eli Lilly. It was approved by the FDA in May 2022 and by the MHRA in the UK. Published data from the SURMOUNT and SURPASS clinical trial programmes demonstrated significant effects on glycaemic control and body weight. It is the first dual incretin approved for clinical use.",
     details: [
@@ -70,6 +74,9 @@ const Research = () => {
                   viewport={{ once: true }}
                   className="rounded-xl border border-border bg-card p-6 md:p-8"
                 >
+                  <div className="mb-4 overflow-hidden rounded-lg">
+                    <img src={compound.image} alt={compound.name} className="h-52 w-full object-cover" />
+                  </div>
                   <div className="mb-4 flex items-center gap-3">
                     <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
                       <FlaskConical size={18} className="text-primary" />

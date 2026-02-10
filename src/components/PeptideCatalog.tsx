@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import PeptideCard from "./PeptideCard";
+import retatrutideImg from "@/assets/retatrutide-pen.jpg";
+import tirzepatideImg from "@/assets/tirzepatide-pen.jpg";
 
 const peptides = [
   {
@@ -9,6 +11,7 @@ const peptides = [
     weight: "60mg Pre-filled Pen",
     category: "Research Compound",
     price: "£200",
+    image: retatrutideImg,
   },
   {
     name: "Tirzepatide (Mounjaro) Pen",
@@ -17,6 +20,7 @@ const peptides = [
     weight: "60mg Pre-filled Pen",
     category: "Research Compound",
     price: "£170",
+    image: tirzepatideImg,
   },
 ];
 
