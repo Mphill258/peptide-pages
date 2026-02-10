@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const navItems = ["Peptides", "Research", "About", "Contact"];
+const navItems = [
+  { label: "Home", to: "/" },
+  { label: "Products", to: "/#peptides" },
+  { label: "Research", to: "/research" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,28 +22,28 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl"
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="/" className="font-display text-xl font-bold tracking-tight">
+        <Link to="/" className="font-display text-xl font-bold tracking-tight">
           <span className="text-gradient">PEPTIDE</span>
           <span className="text-foreground">LAB</span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+            <Link
+              key={item.label}
+              to={item.to}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              {item}
-            </a>
+              {item.label}
+            </Link>
           ))}
-          <a
-            href="#peptides"
+          <Link
+            to="/#peptides"
             className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[var(--shadow-glow)]"
           >
-            Shop Now
-          </a>
+            View Products
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -57,14 +64,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col gap-4 px-6 py-6">
             {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+              <Link
+                key={item.label}
+                to={item.to}
                 onClick={() => setIsOpen(false)}
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
-                {item}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
         </motion.div>

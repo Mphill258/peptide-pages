@@ -25,7 +25,7 @@ const Hero = () => {
         >
           <FlaskConical size={16} className="text-primary" />
           <span className="text-sm font-medium text-primary">
-            Research-Grade Peptides
+            Research-Grade Compounds
           </span>
         </motion.div>
 
@@ -35,8 +35,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight md:text-7xl"
         >
-          Precision Peptides for{" "}
-          <span className="text-gradient">Advanced Research</span>
+          Research Peptides for{" "}
+          <span className="text-gradient">Educational Study</span>
         </motion.h1>
 
         <motion.p
@@ -45,8 +45,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          Lab-tested, HPLC-purified peptides with 99%+ purity. Built for
-          researchers who demand excellence.
+          HPLC-purified peptide compounds with 99%+ purity. Supplied strictly
+          for in-vitro research and educational purposes only.
         </motion.p>
 
         <motion.div
@@ -59,14 +59,14 @@ const Hero = () => {
             href="#peptides"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-sm font-semibold text-primary-foreground transition-all hover:shadow-[var(--shadow-glow)] hover:brightness-110"
           >
-            Browse Catalog
+            View Products
             <ArrowRight size={16} />
           </a>
           <a
-            href="#research"
+            href="/research"
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-8 py-3.5 font-display text-sm font-semibold text-secondary-foreground transition-all hover:border-primary/40"
           >
-            View Research
+            Research & Education
           </a>
         </motion.div>
 
@@ -79,8 +79,8 @@ const Hero = () => {
         >
           {[
             { value: "99%+", label: "Purity" },
-            { value: "150+", label: "Peptides" },
-            { value: "10K+", label: "Researchers" },
+            { value: "UK", label: "Based" },
+            { value: "3rd Party", label: "Tested" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display text-2xl font-bold text-primary md:text-3xl">

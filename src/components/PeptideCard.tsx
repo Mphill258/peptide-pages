@@ -48,7 +48,7 @@ const PeptideCard = ({ name, sequence, purity, weight, category, index, price }:
       </div>
 
       <button className="mt-4 w-full rounded-lg border border-border bg-secondary py-2.5 text-sm font-medium text-secondary-foreground transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-primary">
-        Order Now
+        Enquire Now
       </button>
     </motion.div>
   );
