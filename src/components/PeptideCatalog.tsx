@@ -7,16 +7,14 @@ const peptides = [
     sequence: "GIP/GLP-1/Glucagon Triple Agonist",
     purity: "99.5%",
     weight: "60mg Pre-filled Pen",
-    category: "Research Peptide",
-    price: "£200",
+    category: "Research Compound",
   },
   {
     name: "Tirzepatide (Mounjaro) Pen",
     sequence: "GIP/GLP-1 Dual Agonist",
     purity: "99.4%",
     weight: "60mg Pre-filled Pen",
-    category: "Research Peptide",
-    price: "£170",
+    category: "Research Compound",
   },
 ];
 
@@ -35,10 +33,10 @@ const PeptideCatalog = () => {
             Our <span className="text-gradient">Research Compounds</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Pre-filled, HPLC-purified, third-party tested — for research use only
+            HPLC-purified, third-party tested — for research and educational purposes only
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            UK delivery only · £10 shipping · Not for human consumption
+            Not for human consumption
           </p>
         </motion.div>
 

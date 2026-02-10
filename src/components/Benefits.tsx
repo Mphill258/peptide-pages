@@ -4,9 +4,9 @@ import { Shield, Microscope, Truck, Award } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "99%+ Purity Guaranteed",
+    title: "99%+ Purity Verified",
     description:
-      "Every batch is HPLC tested and verified. We provide certificates of analysis for full transparency.",
+      "Every batch is HPLC tested and verified. Certificates of analysis are available for full transparency.",
   },
   {
     icon: Microscope,
@@ -16,15 +16,15 @@ const features = [
   },
   {
     icon: Truck,
-    title: "Fast & Discreet Shipping",
+    title: "UK-Based Supplier",
     description:
-      "Temperature-controlled packaging with expedited shipping. Orders ship within 24 hours.",
+      "All compounds are dispatched from the UK with temperature-controlled packaging for compound integrity.",
   },
   {
     icon: Award,
     title: "Third-Party Tested",
     description:
-      "Independent lab verification with mass spectrometry and amino acid analysis on every product.",
+      "Independent laboratory verification with mass spectrometry and amino acid analysis on every batch.",
   },
 ];
 
