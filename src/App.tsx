@@ -9,6 +9,7 @@ import Research from "./pages/Research";
 import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
+import AgeGate from "./components/AgeGate";
 
 const queryClient = new QueryClient();
 
@@ -17,16 +18,18 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <AgeGate>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </AgeGate>
     </TooltipProvider>
   </QueryClientProvider>
 );
